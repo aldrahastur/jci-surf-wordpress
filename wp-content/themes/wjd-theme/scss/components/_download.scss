@@ -1,0 +1,53 @@
+.download {
+    align-items: center;
+    color: $color-semidark;
+    display: flex;
+    max-width: 37rem;
+}
+.download__wrapper {
+    margin-bottom: 3vw;
+    margin-top: 3vw;
+}
+.download+ .download,
+.download__col+ .download__col {
+    margin-top: 3vw;
+}
+@media (min-width: 768px) {
+    .download__col+ .download__col {
+        margin-top: 0;
+    }
+}
+.download__title {
+    flex-grow: 1;
+    line-height: 1.4;
+    max-height: 4.2em;
+    overflow: hidden;
+}
+.download__image,
+.download__download-icon {
+    flex-shrink: 0;
+}
+.download__image {
+    align-items: center;
+    color: $accent;
+    display: flex;
+    font-size: 4em;
+    height: 5.3125rem;
+    justify-content: center;
+    margin-right: 1rem;
+    text-align: center;
+    width: 7.5rem;
+    img,
+    picture {
+        display: block;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+.download__icon {
+    color: $accent-tertiary;
+    font-size: 2em;
+    margin-left: 1rem;
+}

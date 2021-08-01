@@ -1,0 +1,11 @@
+.language-switch {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+.language-switch__item.is-active {
+    display: none;
+}

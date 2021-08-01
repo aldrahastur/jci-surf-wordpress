@@ -1,0 +1,69 @@
+
+
+.section {
+    &:not(.is-funky) {
+        margin: 6vw 0;
+    }
+    &.is-funky {
+        padding: 6vw 0;
+    }
+}
+@media (min-width: 992px) {
+    .section:not(.is-funky) {
+        margin: 3.75rem 0;
+    }
+}
+@media (min-width: 992px) {
+    .section.is-funky {
+        padding: 3.75rem 0;
+    }
+}
+.section__headline {
+    font-size: 1.75rem;
+    margin: 0;
+    margin-bottom: 2.4975rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .section__headline {
+        overflow: visible;
+        white-space: normal;
+        &::after {
+            display: none;
+        }
+    }
+}
+.section__content {
+    background: none;
+    position: relative;
+}
+.section {
+    &.is-full-width> .section__content {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: none;
+        width: 100%;
+    }
+    &.is-funky {
+        background: (center / cover) no-repeat url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMSIgaGVpZ2h0PSI4MjUiIHZpZXdCb3g9IjAgMCAxOTIxIDgyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE5MjEiIGhlaWdodD0iODI1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIwLjk3NTM0MiIgd2lkdGg9IjE5MjAiIGhlaWdodD0iODI1IiBmaWxsPSIjMDEzNDkzIi8+CjxtYXNrIGlkPSJtYXNrMCIgbWFzay10eXBlPSJhbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjE5MjEiIGhlaWdodD0iODI1Ij4KPHJlY3QgeD0iMC45NzUzNDIiIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjgyNSIgZmlsbD0id2hpdGUiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swKSI+CjxyZWN0IHg9Ii00MC4xNzcxIiB5PSItOTYuNDI0NSIgd2lkdGg9IjIwMDIiIGhlaWdodD0iMjk4IiB0cmFuc2Zvcm09InJvdGF0ZSgtNSAtNDAuMTc3MSAtOTYuNDI0NSkiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMDgiLz4KPHJlY3QgeD0iLTY5LjYyNDEiIHk9IjYzMi43OTIiIHdpZHRoPSIyMDAyIiBoZWlnaHQ9IjQyMyIgdHJhbnNmb3JtPSJyb3RhdGUoLTYgLTY5LjYyNDEgNjMyLjc5MikiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMDgiLz4KPHJlY3QgeD0iLTIxLjc4MjIiIHk9Ijc3OC4wMjkiIHdpZHRoPSIyMDAyIiBoZWlnaHQ9IjMwOSIgdHJhbnNmb3JtPSJyb3RhdGUoLTIgLTIxLjc4MjIgNzc4LjAyOSkiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMSIvPgo8L2c+Cjwvc3ZnPgo=);
+        .section__headline {
+            color: $color-light;
+        }
+        .headline-section {
+            margin-bottom: 3vw;
+            margin-top: 0 !important;
+        }
+        .headline-section__headline {
+            margin: 0;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .section.is-funky .headline-section {
+        margin-bottom: 1.875rem !important;
+        margin-top: 0 !important;
+    }
+}

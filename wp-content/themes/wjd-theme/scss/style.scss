@@ -1,0 +1,59 @@
+/*!
+Theme Name: WJD Theme
+Text Domain: wjd-theme
+Version: 1.0.10
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Description: Im Rahmen des WJD-Plattform Projektes wurde 2019 die Webseite der Wirtschaftsjunioren Deutschland e.V. erneuert. Daraus wurde 2020 ein Wordpress Theme für Landes-, Regional- und Kreisverbände abgeleitet.
+Tags: blog
+Author: Wirtschaftsjunioren Deutschland e.V.
+Author URI: https://plattform.wjd.de
+Theme URI: https://plattform.wjd.de/wordpress
+License: tbd
+License URI: tbd
+*/
+
+@import 'base/fonts',
+        'base/mixins',
+        'base/form-mixins',
+        'base/variables';
+
+@import 'vendor/swiper',
+        'vendor/normalize',
+        'vendor/bootstrap',
+        'vendor/fontawesome',
+        'vendor/hamburgers';
+
+@import 'layout/containers',
+        'layout/content',
+        'layout/footer',
+        'layout/header';
+
+@import 'components/breadcrumb',
+        'components/buttons',
+        'components/cards',
+        'components/colorbox',
+        'components/cookie-banner',
+        'components/download',
+        'components/event-widget',
+        'components/webform',
+        'components/node-preview-backlink',
+        'components/event-date',
+        'components/video-embed',
+        'components/figure',
+        'components/hero',
+        'components/gallery',
+        'components/kitchensink',
+        'components/meta',
+        'components/language-switch',
+        'components/nav',
+        'components/quote',
+        'components/pagination',
+        'components/rte',
+        'components/section',
+        'components/spacers';
+
+@import 'pages/events',
+        'pages/components';
+
+@import 'layout/nova';

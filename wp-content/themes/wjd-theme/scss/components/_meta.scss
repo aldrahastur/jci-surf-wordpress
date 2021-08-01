@@ -1,0 +1,29 @@
+
+.meta {
+    &.is-inverted {
+        background-color: $inverted-background;
+    }
+    &.is-capitalized {
+        letter-spacing: .05em;
+        text-transform: uppercase;
+    }
+}
+.meta__item {
+    display: inline-block;
+    &:first-child {
+        margin-right: .625rem;
+    }
+    &.is-text {
+        color: $accent-secondary;
+        font-weight: bold;
+    }
+    &.is-date {
+        color: $meta;
+    }
+}
+.meta.is-inverted {
+    background: none;
+    .card__meta-data .is-date {
+        color: rgba(255, 255, 255, .5) !important;
+    }
+}

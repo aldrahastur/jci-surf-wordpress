@@ -1,0 +1,13 @@
+.wp-block-embed-youtube,
+.video-embed {
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}

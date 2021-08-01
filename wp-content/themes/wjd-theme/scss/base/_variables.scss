@@ -1,0 +1,53 @@
+/**
+ * Fonts
+ */
+$font-main: 'Chivo';
+$font-awesome: 'Font Awesome 5 Free';
+
+/**
+ * General Colors
+ */
+
+$color-transparent: rgba(0, 0, 0, 0);
+$color-light: #fff;
+$color-dark: #000;
+
+$color-semidark: #1d1d1b;
+$color-warning-red: #ff4439;
+$color-darkgrey: #232121;
+
+
+$background: #fff;
+$foreground: #1d1d1b;
+$accent: #013493;
+$accent-secondary: #41d4ae;
+$accent-tertiary: #f8a102;
+$faint-dark: #9aafd4;
+$faint: #add0e6;
+$faint-light: #f5f7fa;
+$gray: #a4a9ad;
+$form-gray: #232121;
+$form-gray-2: #6e6e6e;
+$item-background: #e5eaf4;
+$meta: #868a92;
+$inverted-background: #013493;
+$inverted-foreground: #fff;
+    
+/**
+ * Font-Colors
+ */
+
+$color-font-main: #000;
+
+/**
+ * Breakpoints & Container widths
+ */
+$break-lg: 1199px;
+$break-md: 991px;
+$break-sm: 767px;
+$break-xs: 499px;
+$break-xxs: 399px;
+
+$container-lg: 1170px;
+$container-md: 970px;
+$container-sm: 750px;

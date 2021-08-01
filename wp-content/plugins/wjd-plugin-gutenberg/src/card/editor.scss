@@ -1,0 +1,150 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block[data-type='wjd/card'] {
+    padding: 1px 43px;
+    .card-media {
+        &:after {
+            clear: both;
+            content: ' ';
+            display: block;
+        }
+        &.left> .editor-rich-text {
+            float: left;
+            text-align: left;
+            width: 100%;
+        }
+        &.right> .editor-rich-text {
+            float: left;
+            text-align: right;
+            width: 100%;
+        }
+        &.left> button {
+            float: left;
+        }
+        &.right> button {
+            float: right;
+        }
+    }
+    .card__image-credit {
+        &::before {
+            content: '© ';
+            position: inline;
+        }
+    }
+    .card-meta {
+        &::after {
+            clear: both;
+            content: '';
+            display: block;
+        }
+        > * {
+            float: left;
+            > * {
+                min-width: 10px;
+                background-color: #fff;
+                display: block;
+                padding: 5px;
+                &.is-selected {
+                    outline: 1px solid #013493;
+                }
+            }
+            .card__meta-text {
+                color: #41d4ae;
+                font-weight: bold;
+                margin-left: 20px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .card-headline,
+    .link-controls {
+        .editor-rich-text {
+            > * {
+                min-width: 10px;
+                background-color: #fff;
+                display: block;
+                padding: 5px;
+                margin-bottom: 5px;
+                &.is-selected {
+                    outline: 1px solid #013493;
+                }
+            }
+        }
+    }
+    .color-palette-0 {
+        background-color: #e5eaf4;
+    }
+    .color-palette-1 {
+        background-color: #013493;
+        .link-controls small {
+            color: #e5eaf4;
+        }
+        p.rich-text {
+            color: #fff;
+        }
+        small.card__image-credit {
+            color: #fff;
+        }
+    }
+    .is-plain {
+        .card-meta,
+        .card-headline,
+        .card-content,
+        .link-controls {
+            padding: 10px;
+        }
+        .card-media.left > .editor-rich-text {
+            padding-left: 10px;
+        }
+        .card-media.right > .editor-rich-text {
+            padding-right: 10px;
+        }
+    }
+    .v-card {
+        &.default,
+        &.is-mirrored,
+        &.is-vertical {
+            .card-content,
+            .link-controls {
+                padding: 10px;
+            }
+            .card-media > .editor-rich-text {
+                padding-left: 10px;
+            }
+        }
+        &.default,
+        &.is-mirrored {
+            flex-wrap: wrap;
+            .card-media,
+            .card-content,
+            .link-controls {
+                width: 50%;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .card-content,
+            .link-controls {
+                padding: 10px;
+            }
+            .card-media > .editor-rich-text {
+                padding-left: 10px;
+            }
+        }
+        &.is-mirrored {
+            .card-media {
+                order: 2;
+            }
+            .card-content {
+                order: 1;
+            }
+            .link-controls {
+                order: 3;
+            }
+        }
+    }
+}

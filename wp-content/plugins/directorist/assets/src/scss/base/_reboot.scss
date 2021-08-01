@@ -1,0 +1,11 @@
+body {
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+  &:focus {
+    outline: none;
+  }
+}

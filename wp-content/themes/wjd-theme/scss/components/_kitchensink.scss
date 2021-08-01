@@ -1,0 +1,129 @@
+
+.kitchensink__headline {
+    color: $accent;
+}
+.kitchensink__color {
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .2);
+    display: none;
+    height: 0;
+    margin: .4vw;
+    margin-bottom: 3em;
+    padding-bottom: 10vw;
+    position: relative;
+    width: 10vw;
+    @media (max-width: $break-md) {
+        width: calc(10% - .4vw);
+    }
+    &::before {
+        top: 100%;
+        font-size: .8em;
+        position: absolute;
+        text-align: center;
+        word-break: break-all;
+    }
+    &:nth-child(1) {
+        background: $color-light;
+        display: inline-block;
+        &::before {
+            content: 'background';
+        }
+    }
+    &:nth-child(2) {
+        background: $color-semidark;
+        display: inline-block;
+        &::before {
+            content: 'foreground';
+        }
+    }
+    &:nth-child(3) {
+        background: $inverted-background;
+        display: inline-block;
+        &::before {
+            content: 'accent';
+        }
+    }
+    &:nth-child(4) {
+        background: $accent-secondary;
+        display: inline-block;
+        &::before {
+            content: 'accent-secondary';
+        }
+    }
+    &:nth-child(5) {
+        background: $accent-tertiary;
+        display: inline-block;
+        &::before {
+            content: 'accent-tertiary';
+        }
+    }
+    &:nth-child(6) {
+        background: $faint-dark;
+        display: inline-block;
+        &::before {
+            content: 'faint-dark';
+        }
+    }
+    &:nth-child(7) {
+        background: $faint;
+        display: inline-block;
+        &::before {
+            content: 'faint';
+        }
+    }
+    &:nth-child(8) {
+        background: $faint-light;
+        display: inline-block;
+        &::before {
+            content: 'faint-light';
+        }
+    }
+    &:nth-child(9) {
+        background: $gray;
+        display: inline-block;
+        &::before {
+            content: 'gray';
+        }
+    }
+    &:nth-child(10) {
+        background: $color-darkgrey;
+        display: inline-block;
+        &::before {
+            content: 'form-gray';
+        }
+    }
+    &:nth-child(11) {
+        background: $form-gray-2;
+        display: inline-block;
+        &::before {
+            content: 'form-gray-2';
+        }
+    }
+    &:nth-child(12) {
+        background: $item-background;
+        display: inline-block;
+        &::before {
+            content: 'item-background';
+        }
+    }
+    &:nth-child(13) {
+        background: $meta;
+        display: inline-block;
+        &::before {
+            content: 'meta';
+        }
+    }
+    &:nth-child(14) {
+        background: $inverted-background;
+        display: inline-block;
+        &::before {
+            content: 'inverted-background';
+        }
+    }
+    &:nth-child(15) {
+        background: $color-light;
+        display: inline-block;
+        &::before {
+            content: 'inverted-foreground';
+        }
+    }
+}

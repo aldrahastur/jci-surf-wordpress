@@ -1,0 +1,273 @@
+
+.image-gallery {
+    position: relative;
+    &.is-open .swiper-container {
+        padding-bottom: 2em;
+    }
+}
+.image-gallery__pagination,
+.image-gallery__prev,
+.image-gallery__next {
+    bottom: 0;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 2.5rem;
+    z-index: 100;
+}
+.image-gallery__pagination.swiper-button-disabled,
+.image-gallery__prev.swiper-button-disabled,
+.image-gallery__next.swiper-button-disabled {
+    cursor: default;
+    opacity: .2;
+    pointer-events: none;
+}
+.image-gallery__prev {
+    left: 0;
+}
+.image-gallery__next {
+    right: 0;
+}
+.image-gallery__pagination {
+    pointer-events: none;
+    text-align: center;
+    width: 100%;
+}
+.image-gallery:not(.is-open) .image-gallery__pagination {
+    display: none;
+}
+.image-gallery__thumbnails-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    position: relative;
+    .figure__image-wrapper {
+        display: block;
+        height: 0;
+        padding-bottom: 60.625%;
+    }
+}
+@media (max-width: 767px) {
+    .image-gallery__thumbnails-wrapper {
+        flex-direction: column;
+    }
+}
+.image-gallery__thumbnail,
+.image-gallery__thumbnail-redirect {
+    cursor: pointer;
+    flex-basis: 24.25%;
+    margin-bottom: 1.875rem;
+    margin-right: 1%;
+}
+.image-gallery__thumbnail:nth-child(4n) {
+    margin-right: 0;
+}
+.image-gallery__thumbnail-redirect {
+    align-items: center;
+    background-color: $accent-tertiary;
+    color: $color-light;
+    display: none;
+    font-weight: 700;
+    justify-content: center;
+    min-height: 5rem;
+    position: relative;
+    &:nth-child(4n) {
+        margin-right: 0;
+    }
+}
+@media (max-width: 767px) {
+    .image-gallery__thumbnail,
+    .image-gallery__thumbnail-redirect {
+        margin-right: 0;
+    }
+}
+@media (max-width: 767px) {
+    .image-gallery__thumbnail {
+        display: none;
+        margin-bottom: 0;
+        &:first-child {
+            display: block;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .image-gallery__thumbnail:hover img {
+        -webkit-transform: scale(1.35);
+        transform: scale(1.35);
+    }
+}
+.is-overflow .image-gallery__thumbnail-redirect {
+    display: flex;
+}
+:root .image-gallery__thumbnail-redirect {
+    height: 0;
+    padding-bottom: 14.64094%;
+    > * {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+@media (max-width: 767px) {
+    .image-gallery__thumbnail-redirect {
+        background-color: $item-background;
+        color: $color-semidark;
+        display: block;
+        justify-content: left;
+        margin: 0;
+        padding: 0 .9375rem;
+        a {
+            color: $color-semidark !important;
+        }
+        i {
+            color: $accent-tertiary;
+        }
+    }
+}
+.image-gallery__thumbnail-redirect {
+    i {
+        margin-left: .625rem;
+    }
+    &:hover i {
+        -webkit-transform: translateX(.375rem);
+        transform: translateX(.375rem);
+    }
+    a {
+        color: $color-light;
+    }
+}
+.image-gallery__thumbnail-image-count {
+    display: none;
+}
+@media (max-width: 767px) {
+    .image-gallery__thumbnail-image-count {
+        display: block;
+        position: absolute;
+        right: .9375rem;
+    }
+}
+@media (max-width: 767px) {
+    .image-gallery .swiper-container {
+        background-color: $item-background;
+    }
+}
+@media (min-width: 768px) {
+    .image-gallery__thumbnails-wrapper .image-gallery__caption {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+body.is-modal-open {
+    overflow: hidden;
+}
+.image-gallery-overlay {
+    align-items: center;
+    background: rgba(29, 29, 27, .8);
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+    &.is-ready {
+        display: flex;
+    }
+}
+.image-gallery-overlay__close {
+    position: absolute;
+    right: 0;
+    z-index: 1000000;
+}
+.image-gallery-overlay__slide {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.image-gallery-overlay__prev,
+.image-gallery-overlay__next {
+    border: none;
+    font-size: 2rem;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+}
+.image-gallery-overlay__prev.swiper-button-disabled,
+.image-gallery-overlay__next.swiper-button-disabled {
+    cursor: default;
+    opacity: .1;
+    pointer-events: none;
+}
+.image-gallery-overlay__prev {
+    left: 1rem;
+}
+.image-gallery-overlay__next {
+    right: 1rem;
+}
+.image-gallery-overlay .figure__image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.image-gallery-overlay__thumbnail {
+    background: $color-light;
+    max-width: 80vw;
+}
+.image-gallery-overlay__inner {
+    height: 100%;
+    width: 100%;
+    z-index: 100000;
+    .swiper-container {
+        height: 100%;
+        img {
+            max-height: 80vh;
+            max-width: 80vw;
+        }
+    }
+}
+.image-gallery .figure__caption,
+.image-gallery-overlay .figure__caption {
+    margin-top: 0;
+}
+.image-gallery__caption,
+.image-gallery-overlay__caption {
+    padding: 1rem;
+    position: relative;
+}
+.image-gallery__caption-meta,
+.image-gallery-overlay__caption-meta {
+    margin-bottom: .4em;
+}
+.image-gallery__caption-title,
+.image-gallery-overlay__caption-title {
+    line-height: 1.4;
+    max-height: 2.8em;
+    overflow: hidden;
+}
+.image-gallery__caption-pagination,
+.image-gallery-overlay__caption-pagination {
+    font-size: .8em;
+    padding-top: 1rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+.image-gallery__caption-credit,
+.image-gallery-overlay__caption-credit {
+    padding-top: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+}
+.image-gallery__caption-meta,
+.image-gallery__caption-credit,
+.image-gallery-overlay__caption-meta,
+.image-gallery-overlay__caption-credit {
+    color: $gray;
+    font-size: .875rem;
+}

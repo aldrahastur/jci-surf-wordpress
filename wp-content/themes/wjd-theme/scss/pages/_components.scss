@@ -1,0 +1,86 @@
+body.components {
+    :root {
+        --transition-duration: .3s;
+        --margin: 5em;
+    }        
+    .row.dev-switch {
+        position: fixed;
+        z-index: 9999;
+        display: block;
+        background: black;
+        top: 12%;
+        right: 0;
+        padding: 1rem;
+        margin: 0;
+    }      
+    .variant-header {
+        margin-top: 80px;
+        @media (max-width: $break-md) {
+            margin-top: 70px;
+        }
+        @media (max-width: $break-sm) {
+            margin-top: 60px;
+        }
+    }        
+    .components-separator {
+        margin-top: 80px;
+        @media (max-width: $break-md) {
+            margin-top: 70px;
+        }
+        @media (max-width: $break-sm) {
+            margin-top: 60px;
+        }
+        margin-bottom: 80px;
+        @media (max-width: $break-md) {
+            margin-bottom: 70px;
+        }
+        @media (max-width: $break-sm) {
+            margin-bottom: 60px;
+        }
+    }        
+    .component-link {
+        vertical-align: middle;
+        a:hover {
+            opacity: .5;
+        }
+        a:last-child {
+            font-weight: bold;
+            display: inline-block;
+        }
+        a:last-child:after {
+            content: '➔';
+            font-size: 1rem;
+            display: inline-block;
+        }
+    }
+    .toggle + .toggle {
+        margin-left: 0 !important;
+    }        
+    .toggleable {
+        transition: max-height .3s ease, opacity .3s ease, margin .3s ease;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border-radius: 5px;
+        margin-bottom: 1em;
+        max-height: 50vh;
+    }
+    .toggleable:not(.is-active) {
+        opacity: 0;
+        max-height: 0 !important;
+        margin: 0;
+    }
+    .toggleable pre {
+        margin: 0;
+        border-radius: 0;
+    }
+    .is-white .row.dev-switch {
+        background: white;
+    }
+    .dev-switch__item {
+        display: block;
+        width: auto;
+    }
+}
+.components::before {
+    display: none !important;
+}

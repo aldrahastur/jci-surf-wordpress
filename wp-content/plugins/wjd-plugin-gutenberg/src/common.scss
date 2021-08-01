@@ -1,0 +1,92 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+
+// Colors.
+$black: rgb(41, 41, 41);
+$white: #f4f4f4;
+$gray: #dedede;
+$green: #bada55;
+$red: orangered;
+
+@font-face {
+    font-display: auto;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    src: url('fonts/fa-solid-900.eot');
+    src: url('fonts/fa-solid-900.eot?#iefix') format('embedded-opentype'),url('fonts/fa-solid-900.woff2') format('woff2'),url('fonts/fa-solid-900.woff') format('woff'),url('fonts/fa-solid-900.ttf') format('truetype'),url('fonts/fa-solid-900.svg#fontawesome') format('svg');
+}
+@font-face {
+    font-display: auto;
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/fa-brands-400.eot');
+    src: url('fonts/fa-brands-400.eot?#iefix') format('embedded-opentype'),url('fonts/fa-brands-400.woff2') format('woff2'),url('fonts/fa-brands-400.woff') format('woff'),url('fonts/fa-brands-400.ttf') format('truetype'),url('fonts/fa-brands-400.svg#fontawesome') format('svg');
+}
+@font-face {
+    font-display: auto;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/fa-regular-400.eot');
+    src: url('fonts/fa-regular-400.eot?#iefix') format('embedded-opentype'),url('fonts/fa-regular-400.woff2') format('woff2'),url('fonts/fa-regular-400.woff') format('woff'),url('fonts/fa-regular-400.ttf') format('truetype'),url('fonts/fa-regular-400.svg#fontawesome') format('svg');
+}
+@font-face {
+    font-display: auto;
+    font-family: 'Font Awesome 5 Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/fa-regular-400.eot');
+    src: url('fonts/fa-regular-400.eot?#iefix') format('embedded-opentype'),url('fonts/fa-regular-400.woff2') format('woff2'),url('fonts/fa-regular-400.woff') format('woff'),url('fonts/fa-regular-400.ttf') format('truetype'),url('fonts/fa-regular-400.svg#fontawesome') format('svg');
+}
+
+body.wp-admin {
+    .wp-block {
+        max-width: 900px;
+    }
+    .blocks-gallery-grid {
+        .blocks-gallery-item {
+            flex-grow: 0 !important;
+            margin: 10px 10px 10px !important;
+            width: calc(25% - 20px) !important;
+            img {
+                height: 100%;
+                flex: 1;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+    .wp-block[data-type="core/gallery"] {
+        .components-drop-zone ~ .editor-rich-text {
+            display: none;
+        }
+    }
+}
+body:not(.wp-admin) {
+    $colors: ( blue, #013493 ),
+    ( lightblue, #e5eaf4 );
+
+    @each $name, $color in $colors {
+        .has-#{$name}-color {
+            color: $color;
+        }
+        .has-#{$name}-background-color {
+            background-color: $color;
+            padding: 2vw !important;
+        }
+    }
+    p.has-background {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    p:not(.cite-part) {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}

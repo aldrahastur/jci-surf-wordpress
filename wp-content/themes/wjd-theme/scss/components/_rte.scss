@@ -1,0 +1,41 @@
+.rte-content {
+    line-height: 1.4;
+    h1 br,
+    h2 br,
+    h3 br,
+    h4 br,
+    h5 br,
+    h6 br {
+        display: none;
+    }
+    a {
+        color: $accent-tertiary;
+        &:link,
+        &:visited,
+        &:active {
+            color: $accent-tertiary;
+        }
+        &:hover,
+        &:focus {
+            color: $accent-secondary;
+        }
+        &:link {
+            &:hover,
+            &:focus {
+                color: $accent-secondary;
+            }
+        }
+        &:visited {
+            &:hover,
+            &:focus {
+                color: $accent-secondary;
+            }
+        }
+        &:active {
+            &:hover,
+            &:focus {
+                color: $accent-secondary;
+            }
+        }
+    }
+}

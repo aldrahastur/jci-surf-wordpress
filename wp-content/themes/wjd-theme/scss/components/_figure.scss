@@ -1,0 +1,18 @@
+.figure {
+    margin: 0;
+    overflow: hidden;
+}
+.figure__image-wrapper {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.figure__image {
+    display: block;
+    img {
+        display: block;
+    }
+}
+.figure__caption {
+    margin-top: .9375rem;
+}

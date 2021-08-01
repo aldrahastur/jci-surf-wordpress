@@ -1,0 +1,158 @@
+/**
+* #.# Editor Styles
+*
+* CSS for just Backend enqueued after style.scss
+* which makes it higher in priority.
+*/
+@keyframes pulse {
+    0% {
+        background-color: #ffffff;
+    }
+    50% {
+        background-color: #cccccc;
+    }
+
+    100% {
+        background-color: #ffffff;
+    }
+}
+.wp-block-wjd-positioncard {
+    border: 1px dashed rgba(0, 0, 0, .5);
+    padding: .5em;
+    &.no-post {
+        animation: none;
+    }
+    &.lade {
+        animation: pulse 3s infinite;
+    }
+    &.has-post {
+        animation: none;
+        padding-bottom: 2.3125rem;
+    }
+}
+.v-card {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    .card__image-wrapper {
+        display: flex;
+        flex-basis: 50%;
+        flex-direction: column;
+        position: relative;
+        .figure {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        .figure__image-wrapper {
+            display: block;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            &::after {
+                background-color: #41d4ae;
+                bottom: 0;
+                content: '';
+                height: .3125rem;
+                left: 0;
+                position: absolute;
+                width: 100%;
+                z-index: 0;
+            }
+        }
+        .figure__image {
+            display: block;
+            height: 100%;
+            img {
+                display: block;
+                height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+                object-position: 50% 50%;
+                width: 100%;
+            }
+        }
+        .card__image-credit {
+            bottom: -.3125rem;
+            color: #a4a9ad;
+            font-size: .8125rem;
+            height: 1.625rem;
+            overflow: hidden;
+            position: absolute;
+            text-align: right;
+            text-overflow: ellipsis;
+            transform: translateY(100%);
+            white-space: nowrap;
+            width: 100%;
+            z-index: 10;
+        }
+    }
+    .card__content {
+        display: flex;
+        flex-basis: 50%;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 2vw;
+        .card__meta-data {
+            list-style: none;
+            margin-bottom: 1.2rem;
+            margin-top: 0;
+            padding: 0;
+            .is-date {
+                color: #868a92;
+                display: inline-block;
+                margin-right: .625rem;
+            }
+            .is-text {
+                color: #41d4ae;
+                display: inline-block;
+                font-weight: bold;
+                letter-spacing: .05em;
+                text-transform: uppercase;
+            }
+        }
+        .card__main {
+            flex-grow: 1;
+            font-size: 1.125rem;
+            line-height: 1.4;
+            .card__headline {
+                font-size: 1.5rem;
+                font-weight: normal;
+                margin-bottom: 1.2rem;
+                margin-top: 0;
+            }
+            .rte-content {
+                line-height: 1.4;
+                margin-bottom: 0;
+                > *:first-child {
+                    margin-top: 0;
+                }
+                > *:last-child {
+                    margin-bottom: 0;
+                }
+                p {
+                    line-height: 1.4;
+                }
+            }
+        }
+        .card__footer {
+            margin-top: 1.875rem;
+            .card__cta {
+                color: #1d1d1b;
+                outline: 0;
+                i {
+                    display: none;
+                }
+            }
+        }
+    }
+    &.is-mirrored {
+        .card__image-wrapper {
+            order: 1;
+        }
+    }
+    &.is-vertical {
+        flex-direction: column;
+    }
+}

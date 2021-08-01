@@ -1,0 +1,135 @@
+
+.quote {
+    background: $item-background;
+    margin: 0 auto;
+    max-width: 49.375rem;
+    position: relative;
+    &.has-no-paragraphs .quote__body::before {
+        display: inline-block;
+    }
+    &.has-paragraphs .quote__body p {
+        &:first-child::before,
+        &:last-child::before {
+            display: inline-block;
+        }
+    }
+    &.has-no-paragraphs .quote__body::after {
+        display: inline-block;
+    }
+    &.has-paragraphs .quote__body p {
+        &:first-child::after,
+        &:last-child::after {
+            display: inline-block;
+        }
+    }
+    &.has-no-paragraphs .quote__body::before,
+    &.has-paragraphs .quote__body p:first-child::before {
+        content: '„';
+        margin-right: -.2em;
+    }
+    &.has-no-paragraphs .quote__body::after,
+    &.has-paragraphs .quote__body p:last-child::after {
+        content: '“';
+        margin-left: -.2em;
+    }
+}
+.quote__inner {
+    padding: 5.625rem 2.8125rem 7.3125rem 2.8125rem;
+}
+.quote__image {
+    border-radius: 50%;
+    box-shadow: 0 0 0 .75rem $color-light;
+    height: 0;
+    left: 50%;
+    overflow: hidden;
+    padding-bottom: 23%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translate(-50%, -75%);
+    transform: translate(-50%, -75%);
+    width: 23%;
+    img {
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .quote__image {
+        padding-bottom: 33%;
+        width: 33%;
+    }
+}
+.quote__body {
+    color: $accent;
+    font-size: 2.625rem;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    > * {
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .quote__body {
+        font-size: 1.75rem;
+    }
+}
+.quote {
+    &.has-paragraphs .quote__body p {
+        &:first-child::before {
+            margin-left: 0;
+            padding-right: .2em;
+        }
+        &:last-child::after {
+            margin-right: 0;
+            padding-left: .2em;
+        }
+    }
+    &.has-no-paragraphs .quote__body span {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    &.is-highlight {
+        background: none;
+        border: .3125rem solid $accent;
+    }
+    &.has-image {
+        margin-top: 23%;
+    }
+}
+@media (max-width: 576px) {
+    .quote.has-image {
+        margin-top: 33%;
+    }
+}
+@media (min-width: 992px) {
+    .quote.has-image {
+        margin-top: 11.25rem;
+    }
+}
+.quote__footer {
+    bottom: 1.6em;
+    font-size: 1.125rem;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+@media (max-width: 576px) {
+    .quote__footer {
+        font-size: 1.125rem;
+    }
+}
+.quote__name,
+.quote__title {
+    margin: 0;
+}
+.quote__name {
+    font-weight: bold;
+    margin-bottom: .6em;
+}

@@ -1,0 +1,306 @@
+.card__tag,
+.card__meta-data .is-text {
+    color: $accent-secondary;
+    font-weight: bold;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+.card {
+    background-color: $item-background;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    &.has-link {
+        cursor: pointer;
+    }
+}
+.card__event-date,
+.card__event-location {
+    @media (min-width: 769px) and (max-width: 991px) {
+        margin-left: 1em;
+    }
+}
+.card__event-label {
+    font-size: .875rem;
+    margin-top: .25rem;
+}
+.card__event-data {
+    font-size: 1.125rem;
+    margin-bottom: 2em;
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &.has-location .card__event-date {
+        margin-bottom: 1em;
+    }
+}
+.card.has-link {
+    cursor: pointer;
+}
+.card__image-credit {
+    bottom: -.3125rem;
+    color: $gray;
+    font-size: .8125rem;
+    height: 1.625rem;
+    overflow: hidden;
+    position: absolute;
+    text-align: right;
+    text-overflow: ellipsis;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    white-space: nowrap;
+    width: 100%;
+    z-index: 10;
+}
+.card {
+    &.is-vertical .card__image-credit {
+        padding-left: .3125rem;
+        padding-right: .3125rem;
+    }
+    figcaption {
+        display: none;
+    }
+}
+.wp-block-column > .card {
+    margin-bottom: 3rem;
+}
+[class*='col-']> .card {
+    margin-bottom: 3rem;
+}
+.card+ .row,
+.wp-block-columns,
+.views-row+ .views-row {
+    margin-top: 3rem;
+}
+.card.is-inverted {
+    background-color: $inverted-background;
+}
+.is-funky .card:not(.is-inverted) .card__cta i,
+.is-funky .card:not(.is-inverted) .card__cta i::before {
+    color: $accent-tertiary;
+}
+.is-funky .card:not(.is-inverted) {
+    background: $color-light;
+    color: $foreground;
+}
+.card {
+    &.is-transparent {
+        background: none !important;
+        .figure__image-wrapper::after {
+            display: none;
+        }
+    }
+    &.is-plain {
+        overflow: hidden;
+        .card__image-wrapper {
+            float: left;
+            margin-bottom: 2.4vw;
+            margin-right: 2.4vw;
+            width: 23.4375rem;
+            @media (max-width: 992px) {
+                margin-bottom: 1.9375rem;
+                width: 100% !important;
+            }
+            + * {
+                margin-top: 0;
+            }
+        }
+        &.is-mirrored .card__image-wrapper {
+            float: right;
+            margin-bottom: 2.4vw;
+            margin-left: 2.4vw;
+            margin-right: 0;
+            width: 408px;
+        }
+    }
+    &.is-vertical {
+        flex-direction: column;
+        body.ie & {
+            display: block;
+        }
+    }
+    .figure__image-wrapper {
+        display: block;
+    }
+    a {
+        color: $accent-tertiary;
+    }
+}
+@media (min-width: 769px) {
+    .card {
+        .figure,
+        .figure__image-wrapper {
+            height: 100%;
+        }
+        .figure__image {
+            height: 100%;
+            body.ie & {
+                min-height: 150px;
+            }
+            img {
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+                -o-object-position: 50% 50%;
+                object-position: 50% 50%;
+                width: 100%;
+                body.ie & {
+                    height: auto;
+                    left: 50%;
+                    max-height: none;
+                    max-width: none;
+                    min-height: 100%;
+                    min-width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        height: auto !important;
+        &.is-transparent {
+            text-align: center;
+        }
+        &:not(.is-mirrored) .card__image-credit {
+            padding-left: .3125rem;
+            padding-right: .3125rem;
+        }
+    }
+}
+.card__meta-data-item {
+    display: inline-block;
+    &:first-child {
+        margin-right: .625rem;
+    }
+}
+.card__content {
+    flex-grow: 1;
+    padding: 2.4vw;
+    &.is-inverted {
+        background: none;
+        a.card__cta {
+            color: $color-light !important;
+            i {
+                color: $accent-tertiary !important;
+                &::before,
+                &::after {
+                    color: $accent-tertiary !important;
+                }
+            }
+        }
+        .card__meta-data .is-date {
+            color: rgba(255, 255, 255, .5) !important;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .card__content {
+        padding: 1.5rem;
+    }
+}
+@media (min-width: 1440px) {
+    .card__content {
+        padding: 2vw;
+    }
+}
+.card__image-wrapper {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    position: relative;
+}
+.card__content {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+}
+.card__meta-data {
+    margin-bottom: 1.2rem;
+    .is-date {
+        color: $meta;
+    }
+}
+.card__headline {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+}
+.card__content {
+    h3 {
+        font-size: 1.5rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: normal;
+        margin-bottom: 1.2rem;
+        margin-top: 1.2rem;
+    }
+}
+.card.has-no-meta .card__headline {
+    margin-top: 0;
+}
+.card__main {
+    flex-grow: 1;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    > * {
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    p {
+        line-height: 1.4;
+    }
+}
+.card__footer {
+    margin-top: 1.875rem;
+}
+.card__cta {
+    font-size: 1.125rem;
+    font-weight: bold;
+    i {
+        color: $accent-tertiary;
+        font-size: .9em;
+        left: .1875rem;
+        position: relative;
+        top: -1px;
+        vertical-align: middle;
+    }
+}
+.card a.card__cta {
+    color: $color-semidark;
+}
+.card.slim-item {
+    .card__content {
+        padding: 20px;
+    }
+    .card__meta-data {
+        margin-bottom: .4rem;
+    }
+    .card__headline {
+        margin-bottom: .4rem;
+    }
+    .card__footer {
+        margin-top: .4rem;
+    }
+}

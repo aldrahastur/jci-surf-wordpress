@@ -1,0 +1,154 @@
+/**
+ * Content Styles
+ */
+body {
+    color: $color-font-main;
+    font-family: $font-main;
+    a,
+    input,
+    button {
+        &,
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited {
+            outline: 0;
+        }
+    }
+    main {
+        overflow-x: hidden;
+    }
+}
+
+.no-focus-outline:focus {
+    outline: none;
+}
+.is-inverted {
+    background: $inverted-background;
+    color: $color-light;
+    a,
+    a i,
+    a i:before,
+    a:link,
+    a:link i,
+    a:link i:before,
+    a:visited,
+    a:visited i,
+    a:visited i:before,
+    a:active,
+    a:active i,
+    a:active i:before {
+        color: $color-light;
+    }
+    &.is-transparent {
+        background: none !important;
+    }
+    a:hover,
+    a:hover i,
+    a:hover i:before,
+    a:active,
+    a:active i,
+    a:active i:before {
+        color: $accent-secondary;
+    }
+}
+.is-hover:hover {
+    opacity: .8;
+}
+.display-block {
+    display: block;
+}
+.no-list-style {
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;;
+}
+.center-all {
+    align-items: center;
+    display: flex;
+    justify-content: center;;
+}
+.center-h {
+    display: flex;
+    justify-content: center;
+}
+.center-v {
+    align-items: center;
+    display: flex;;
+}
+.text-left {
+    text-align: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-center {
+    text-align: center !important;
+}
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
+@media (min-width: 769px) {
+    .hide-on-desktop {
+        display: none !important;
+    }
+}
+.align-left,
+.align-right,
+.align-space-between,
+.align-space-evenly,
+.align-space-around,
+.align-center,
+.align-top,
+.align-bottom,
+.align-middle {
+    display: flex;
+}
+.align-left {
+    justify-content: flex-start;
+}
+.align-right {
+    justify-content: flex-end;
+}
+.align-space-between {
+    justify-content: space-between;
+}
+.align-space-evenly {
+    justify-content: space-evenly;
+}
+.align-space-around {
+    justify-content: space-around;
+}
+.align-center {
+    justify-content: center;
+}
+.align-top {
+    align-items: flex-start;
+}
+.align-bottom {
+    align-items: flex-end;
+}
+.align-middle {
+    align-items: center;
+}
+.v-margin-collapse> *:first-child {
+    margin-top: 0;
+}
+.v-margin-collapse> *:last-child {
+    margin-bottom: 0;
+}
+.h-margin-collapse> *:first-child {
+    margin-left: 0;
+}
+.h-margin-collapse> *:last-child {
+    margin-right: 0;
+}
+.icon {
+    display: inline-block;
+}
+.invis {
+    visibility: hidden;
+}

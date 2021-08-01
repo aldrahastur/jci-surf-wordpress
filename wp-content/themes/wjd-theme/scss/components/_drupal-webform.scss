@@ -1,0 +1,311 @@
+.drupal-webform {
+    font-size: 1.125rem;
+    margin: 0 auto;
+    max-width: 640px;
+    .webform-flexbox {
+        display: block !important;
+        margin: 0 !important;
+    }
+    .js-webform-radios-other-input {
+        width: 100% !important;
+    }
+    .js-webform-radios {
+        display: flex;
+    }
+    .js-form-type-radio,
+    .js-form-type-checkbox {
+        margin-right: 2.25rem;
+    }
+    .js-form-type-radio input,
+    .js-form-type-checkbox input {
+        left: -9999px;
+        position: relative;
+    }
+    .js-form-type-radio input:checked+ label::before,
+    .js-form-type-checkbox input:checked+ label::before {
+        background: $color-tertiary-green;
+        box-shadow: 0 0 0 4px $color-light,0 0 0 6px $color-semidark;
+    }
+    .js-form-type-radio input+ label::before,
+    .js-form-type-checkbox input+ label::before {
+        background: $color-light;
+    }
+    .js-form-type-radio label,
+    .js-form-type-checkbox label {
+        padding-left: 2.0625rem;
+        position: relative;
+    }
+    .js-form-type-radio label::before,
+    .js-form-type-checkbox label::before {
+        background: $color-light;
+        box-shadow: 0 0 0 4px $color-light,0 0 0 5px $color-semidark;
+        content: '';
+        display: block;
+        height: .9375rem;
+        left: 0;
+        margin-left: 4px;
+        margin-top: -.46875rem;
+        position: absolute;
+        top: 50%;
+        width: .9375rem;
+    }
+    .js-form-type-radio.is-invalid label::before,
+    .js-form-type-checkbox.is-invalid label::before {
+        box-shadow: 0 0 0 4px $color-light,0 0 0 5px $color-warning-red;
+    }
+    .js-form-type-radio label::before {
+        border-radius: .46875rem;
+    }
+    .webform-flex--container {
+        margin: 0 !important;
+    }
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        legend {
+            display: none;
+        }
+    }
+    input {
+        &[type='text'],
+        &[type='email'],
+        &[type='date'] {
+            line-height: 1.925rem;
+        }
+    }
+    select {
+        line-height: 1.925rem;
+    }
+    input[type='date'] {
+        &::-webkit-inner-spin-button {
+            display: none;
+        }
+        &::-webkit-calendar-picker-indicator {
+            opacity: 0;
+        }
+    }
+}
+:root:root .drupal-webform {
+    input[type='date'],
+    select {
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTlweCIgaGVpZ2h0PSIxMXB4IiB2aWV3Qm94PSIwIDAgMTkgMTEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU3LjEgKDgzMDg4KSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT5QYXRoIDIgQ29weSA0PC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9Ii0iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CiAgICAgICAgPGcgaWQ9IlVudGVyc2VpdGUtTWl0Z2xpZWQtd2VyZGVuLUNvcHktMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExMTMuMDAwMDAwLCAtOTkyLjAwMDAwMCkiIHN0cm9rZT0iIzZFNkU2RSIgc3Ryb2tlLXdpZHRoPSIyIj4KICAgICAgICAgICAgPGcgaWQ9Ild1bnNjaGtyZWlzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5NTAuMDAwMDAwLCA5MzguMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cG9seWxpbmUgaWQ9IlBhdGgtMi1Db3B5LTQiIHBvaW50cz0iMTY0IDU1IDE3Mi41IDYzIDE4MSA1NSI+PC9wb2x5bGluZT4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+) !important;
+        background-position: right 1.2rem center;
+        background-repeat: no-repeat;
+    }
+}
+.drupal-webform {
+    textarea {
+        line-height: 1.2;
+    }
+    .js-form-type-checkbox {
+        display: inline-block;
+        display: flex;
+        flex-grow: 0;
+        position: relative;
+        width: 100%;
+        &.is-invalid .description {
+            color: $color-warning-red;
+            &::after {
+                color: $color-warning-red;
+            }
+        }
+        input {
+            position: absolute;
+            &:required~ .description::after {
+                content: '*';
+            }
+        }
+        &::after {
+            margin-left: .5rem;
+            margin-top: -.5rem;
+            position: static !important;
+            top: 50%;
+        }
+        .description {
+            display: none;
+        }
+        div {
+            display: inline-block;
+        }
+    }
+    input {
+        &[type='text'],
+        &[type='email'],
+        &[type='date'] {
+            -webkit-appearance: none;
+            background: $color-light;
+            border: 1px solid $color-darkgrey;
+            border-radius: 0;
+            display: block;
+            padding: .6rem .6rem;
+            width: 100%;
+        }
+    }
+    select,
+    textarea {
+        -webkit-appearance: none;
+        background: $color-light;
+        border: 1px solid $color-darkgrey;
+        border-radius: 0;
+        display: block;
+        padding: .6rem .6rem;
+        width: 100%;
+    }
+    input {
+        &[type='text']:focus,
+        &[type='email']:focus,
+        &[type='date']:focus {
+            box-shadow: 0 0 0 1px $color-tertiary-green;
+        }
+    }
+    select:focus,
+    textarea:focus {
+        box-shadow: 0 0 0 1px $color-tertiary-green;
+    }
+    input {
+        &[type='text']:hover,
+        &[type='email']:hover,
+        &[type='date']:hover {
+            background: $color-light;
+            border: 1px solid $color-darkgrey;
+        }
+    }
+    select:hover,
+    textarea:hover {
+        background: $color-light;
+        border: 1px solid $color-darkgrey;
+    }
+    input {
+        &[type='text']:focus,
+        &[type='email']:focus,
+        &[type='date']:focus {
+            background: $color-light;
+            border: 1px solid $color-tertiary-green;
+        }
+    }
+    select:focus,
+    textarea:focus {
+        background: $color-light;
+        border: 1px solid $color-tertiary-green;
+    }
+}
+.form-item.is-invalid {
+    input {
+        &[type='text'],
+        &[type='email'],
+        &[type='date'] {
+            background: $color-light;
+            border: 1px solid $color-warning-red;
+            color: $color-semidark;
+        }
+    }
+    select,
+    textarea {
+        background: $color-light;
+        border: 1px solid $color-warning-red;
+        color: $color-semidark;
+    }
+    input {
+        &[type='text']:focus,
+        &[type='email']:focus,
+        &[type='date']:focus {
+            border: 1px solid $color-tertiary-green;
+        }
+    }
+    select:focus,
+    textarea:focus {
+        border: 1px solid $color-tertiary-green;
+    }
+}
+.drupal-webform {
+    textarea {
+        width: 100%;
+    }
+    label.form-required::after {
+        content: '*';
+    }
+    .form-wrapper {
+        display: block !important;
+    }
+    .form-item {
+        align-items: center;
+        position: relative;
+        &:not(fieldset) {
+            margin-bottom: 10px !important;
+            &:after {
+                background: $color-warning-red;
+                border-radius: .5rem;
+                bottom: 1.5625rem;
+                color: $color-light;
+                content: '!';
+                display: none;
+                font-size: .7rem;
+                font-weight: bold;
+                height: 1rem;
+                line-height: 1rem;
+                margin-bottom: -.5rem;
+                position: absolute;
+                right: 1rem;
+                text-align: center;
+                width: 1rem;
+            }
+        }
+        > div {
+            flex-grow: 1;
+        }
+        &.js-form-type-date::after {
+            right: 3rem;
+        }
+        &.is-invalid:not(fieldset):after {
+            display: block;
+        }
+        label {
+            color: #6e6e6e;
+            display: block;
+            line-height: 1.875rem;
+        }
+    }
+    .form-actions {
+        text-align: right;
+    }
+    .button {
+        background-color: $color-secondary-orange;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgNTEyIj48cGF0aCBkPSJNMjg1LjQ3NiAyNzIuOTcxTDkxLjEzMiA0NjcuMzE0Yy05LjM3MyA5LjM3My0yNC41NjkgOS4zNzMtMzMuOTQxIDBsLTIyLjY2Ny0yMi42NjdjLTkuMzU3LTkuMzU3LTkuMzc1LTI0LjUyMi0uMDQtMzMuOTAxTDE4OC41MDUgMjU2IDM0LjQ4NCAxMDEuMjU1Yy05LjMzNS05LjM3OS05LjMxNy0yNC41NDQuMDQtMzMuOTAxbDIyLjY2Ny0yMi42NjdjOS4zNzMtOS4zNzMgMjQuNTY5LTkuMzczIDMzLjk0MSAwTDI4NS40NzUgMjM5LjAzYzkuMzczIDkuMzcyIDkuMzczIDI0LjU2OC4wMDEgMzMuOTQxeiIvPjwvc3ZnPgo=) !important;
+        background-position: right 1.2rem center;
+        background-repeat: no-repeat;
+        background-size: .6em;
+        border-color: $color-secondary-orange;
+        color: $color-light !important;
+        padding-right: 2.4em;
+        .button__text,
+        .button__icon-before,
+        .button__icon-after {
+            color: $color-light !important;
+        }
+        i {
+            color: $color-light !important;
+            &::before,
+            &::after {
+                color: $color-light !important;
+            }
+        }
+        &:hover {
+            background-color: $color-tertiary-green;
+            border-color: $color-tertiary-green;
+            color: '' !important;
+            .button__text,
+            .button__icon-before,
+            .button__icon-after {
+                color: '' !important;
+            }
+            i {
+                color: '' !important;
+                &::before,
+                &::after {
+                    color: '' !important;
+                }
+            }
+        }
+    }
+}

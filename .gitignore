@@ -1,0 +1,4 @@
+.idea
+wp-config.php
+*.sql
+/wp-content/themes/twenty*

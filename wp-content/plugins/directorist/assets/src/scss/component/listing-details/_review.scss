@@ -1,0 +1,260 @@
+// Directorist Rating
+.directorist-rating-review-block {
+    display: inline-block;
+    border: 1px solid #e3e6ef;
+    padding: 10px 20px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.directorist-review-area {
+    .directorist-review-form-action {
+        margin-top: 16px;
+    }
+
+    .directorist-form-group-guest-user{
+        margin-top: 12px;
+    }
+}
+
+.directorist-rating-given-block {
+
+    .directorist-rating-given-block__label,
+    .directorist-rating-given-block__stars {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+
+        a {
+            box-shadow: none;
+        }
+    }
+
+    .directorist-rating-given-block__label {
+        margin-right: 10px;
+        margin: 0 10px 0 0;
+    }
+
+    .directorist-rating-given-block__stars {
+        .br-widget a {
+            &:before {
+                content: "\f005";
+                font-size: 14px;
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                color: #d4d3f3;
+            }
+
+            &.br-selected,
+            &.br-active {
+                &:before {
+                    color: #fa8b0c;
+                }
+            }
+        }
+
+        .br-current-rating {
+            display: inline-block;
+            margin-left: 20px;
+        }
+    }
+}
+
+// Directorist Current Rating
+.directorist-review-current-rating {
+    margin-bottom: 16px;
+
+    .directorist-review-current-rating__label {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .directorist-review-current-rating__label,
+    .directorist-review-current-rating__stars {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .directorist-review-current-rating__stars {
+        ul {
+            li {
+                display: inline-block;
+
+                span {
+                    color: #d4d3f3;
+
+                    &:before {
+                        content: "\f005";
+                        font-size: 14px;
+                        font-family: 'Font Awesome 5 Free';
+                        font-weight: 900;
+                    }
+
+                    &.directorist-rate-active {
+                        color: #fa8b0c;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Client Review
+.directorist-signle-review {
+    padding-bottom: 26px;
+    padding-top: 30px;
+    border-bottom: 1px solid #e3e6ef;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .directorist-signle-review__top {
+        display: flex;
+        justify-content: space-between;
+
+        .directorist-signle-review-avatar-wrap {
+            display: flex;
+            align-items: center;
+            margin-bottom: 22px;
+
+            .directorist-signle-review-avatar {
+                margin-right: 12px;
+
+                img {
+                    max-width: 50px;
+                    border-radius: 50%;
+                }
+            }
+
+            .directorist-signle-review-avatar__info {
+                p {
+                    font-size: 16px;
+                    color: $dark;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    margin-bottom: 2px;
+                }
+
+                .directorist-signle-review-time {
+                    font-size: 13px;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .directorist-rated-stars{
+            ul{
+                li{
+                    span{
+                        &.directorist-rate-active{
+                            color: #fa8b0c;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//review pagination
+.directorist-content-active .atbdp-universal-pagination {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: -5px;
+      padding: 0;
+  
+      li {
+        flex: none;
+        margin: 5px;
+        padding: 0 10px;
+        border: 1px solid $border-color;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 28px;
+        border-radius: 3px;
+        transition: 0.3s ease;
+        background: #fff;
+  
+        i {
+          line-height: 28px;
+        }
+  
+        &.atbd-active {
+          cursor: pointer;
+  
+          &:hover {
+            border-color: $dark;
+            color: $dark;
+          }
+        }
+  
+        &.atbd-selected {
+          border-color: $dark;
+          color: $dark;
+        }
+  
+        &.atbd-inactive {
+          opacity: 0.5;
+        }
+  
+        &[class^="atbd-page-jump-"] {
+          min-width: 30px;
+          min-height: 30px;
+          position: relative;
+          cursor: pointer;
+  
+          .la {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+  
+          .la_h {
+            visibility: hidden;
+            opacity: 0;
+            left: 70%;
+            transition: 0.3s ease;
+          }
+  
+          .la_d {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.3s ease;
+          }
+  
+          &:hover {
+            color: $dark;
+  
+            .la_h {
+              visibility: visible;
+              opacity: 1;
+              left: 50%;
+            }
+  
+            .la_d {
+              visibility: hidden;
+              opacity: 0;
+              left: 30%;
+            }
+          }
+        }
+      }
+    }
+}
+
+.directorist-card-review-block{
+    .directorist-btn-add-review{
+        padding: 0 14px;
+        line-height: 2.55;
+    }
+}

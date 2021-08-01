@@ -1,0 +1,9 @@
+.wjd-quote {
+    padding: 10px;
+    &.is-detail {
+        background-color: #e5eaf4;
+    }
+    &.is-highlight {
+        border: 0.3125rem solid #013493;
+    }
+}

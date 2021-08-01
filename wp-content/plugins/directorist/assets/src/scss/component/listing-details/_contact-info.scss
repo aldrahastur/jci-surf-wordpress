@@ -1,0 +1,204 @@
+// Directorist Single Info
+.directorist-details-info-wrap {
+    .directorist-single-info {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @media only screen and (max-width: 375px){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &:not(:last-child) {
+            margin-bottom: 10px;
+            @media only screen and (max-width: 375px){
+                margin-bottom: 15px;
+            }
+        }
+
+        a {
+            box-shadow: none;
+        }
+
+        .directorist-single-info__label {
+            display: flex;
+            align-items: center;
+            min-width: 350px;
+            color: #7a82a6;
+            margin-right: 15px;
+
+            @media only screen and (max-width: 575px){
+                min-width: 220px;
+            }
+            @media only screen and (max-width: 375px){
+                min-width: 100%;
+                margin-bottom: 6px;
+                margin-right: 0;
+            }
+
+            .directorist-single-info__label-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                color: #444752;
+                background: #f1f3f8;
+                margin-right: 10px;
+                font-size: 14px;
+                text-align: center;
+                flex: none;
+            }
+        }
+
+        .directorist-single-info__value {
+            flex: 1;
+            color: #7a82a6;
+            a{
+                color: #7a82a6;
+            }
+        }
+
+        .directorist-social-links {
+            a {
+                text-decoration: none;
+                color: $body-color;
+            }
+        }
+
+        &.directorist-single-info-picker{
+            .directorist-single-info__value{
+                .directorist-field-type-color{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+.directorist-social-links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        line-height: 35px;
+        width: 35px;
+        text-align: center;
+        background: $primary !important;
+        border-radius: 4px;
+        color: #fff !important;
+        overflow: hidden;
+        transition: all ease-in-out 300ms !important;
+
+        &.facebook:hover {
+            background-color: #4267B2 !important;
+        }
+
+        &.twitter:hover {
+            background-color: #1da1f2 !important;
+        }
+
+        &.youtube:hover,
+        &.youtube-play:hover {
+            background-color: #ff0000 !important;
+        }
+
+        &.instagram:hover {
+            background-color: #c32aa3 !important;
+        }
+
+        &.linkedin:hover {
+            background-color: #007bb5 !important;
+        }
+
+        &.google-plus:hover {
+            background-color: #db4437 !important;
+        }
+
+        &.snapchat:hover,
+        &.snapchat-ghost:hover {
+            background-color: #eae800 !important;
+        }
+
+        &.reddit:hover {
+            background-color: #ff4500 !important;
+        }
+
+        &.pinterest:hover {
+            background-color: #bd081c !important;
+        }
+
+        &.tumblr:hover {
+            background-color: #35465d !important;
+        }
+
+        &.flickr:hover {
+            background-color: #f40083 !important;
+        }
+
+        &.vimeo:hover {
+            background-color: #1ab7ea !important;
+        }
+
+        &.vine:hover {
+            background-color: #00b489 !important;
+        }
+
+        &.github:hover {
+            background-color: #444752 !important;
+        }
+
+        &.dribbble:hover {
+            background-color: #ea4c89 !important;
+        }
+
+        &.behance:hover {
+            background-color: #196EE3 !important;
+        }
+
+        &.soundcloud:hover {
+            background-color: #ff5500 !important;
+        }
+
+        &.stack-overflow:hover {
+            background-color: #ff5500 !important;
+        }
+
+        span.fa {
+            line-height: inherit;
+            font-size: 16px;
+            font-family: "Font Awesome 5 Brands" !important;
+        }
+    }
+}
+
+// Directorist Owner Contact form
+.directorist-contact-owner-form-inner {
+    .directorist-form-group {
+        margin-bottom: 1rem;
+    }
+
+    .directorist-form-element {
+        border-color: #dbdaf7;
+    }
+
+    .directorist-btn-submit {
+        padding: 0 15px;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+}
+
+
+.directorist-author-social {
+    a .fa {
+        font-family: "Font Awesome 5 Brands";
+    }
+}

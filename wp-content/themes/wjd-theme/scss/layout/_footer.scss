@@ -1,0 +1,101 @@
+footer {
+    &.footer {
+        background-color: $color-semidark;
+        color: $color-light;
+        a {
+            color: $color-light;
+            &:hover {
+                color: $accent-secondary;
+            }
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .border-top {
+            background-color: $accent-secondary;
+            height: 10px;
+        }
+        .grow-logo .footer__logo {
+            flex-grow: 1;
+        }
+        .footer-nav,
+        .footer-nav__item,
+        .textwidget > a.is-social-icon {
+            padding: .75rem 0;
+        }
+        .textwidget > a.is-social-icon {
+            display: block;
+        }
+    }
+    .footer__cta {
+        margin-bottom: 3rem;
+    }
+    .footer__header {
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+        ul {
+            display: flex;
+        }
+        li {
+            display: inline-block;
+        }
+    }
+    .button {
+        margin: 1.5em 0;
+    }
+    .textwidget {
+        margin-bottom: 1.5em;
+        img {
+            height: auto;
+            width: auto;
+        }
+    }
+    .footer__content {
+        text-transform: uppercase;
+    }
+    .footer__content-title {
+        color: $gray;
+        display: block;
+        font-size: .75rem;
+        min-height: .75rem;
+    }
+    .footer__content-list {
+        margin-bottom: 1.5rem;
+    }
+    .footer-nav {
+        &.has-images img {
+            max-height: 3rem;
+        }
+        &.socials {
+            font-size: .625rem;
+            .is-social-icon i {
+                background-color: $inverted-background;
+                font-size: 1.125rem;
+                margin-right: .625rem;
+                padding: .75rem;
+            }
+        }
+    }
+    @media (max-width: 991px) {
+        .footer-nav.socials .footer-nav__item {
+            display: inline-block;
+            width: 49%;
+        }
+    }
+    .footer-logo {
+        height: 70px;
+        width: 250px;
+        img {
+            max-height: 70px;
+            max-width: 250px;
+            object-fit: contain;
+            object-position: left;
+            &:focus,
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@mixin form-text {
+    appearance: none;
+    border: 2px solid $color-dark;
+    border-radius: 0;
+    padding: 15px 20px;
+}
+
+@mixin form-checkbox {
+    appearance: none;
+    border: 0;
+    opacity: 0;
+    position: relative;
+    z-index: 3;
+    + span {
+        padding-left: 10px;
+        position: relative;
+        &::before {
+            background-color: $background;
+            border: 2px solid $color-dark;
+            content: ' ';
+            font-family: $font-awesome;
+            font-size: 16px;
+            height: 20px;
+            left: -20px;
+            line-height: 16px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: 20px;
+            z-index: 1;
+        }
+    }
+    &:checked + span::before {
+        content: '\f00c';
+    }
+}
+
+@mixin form-radio {
+    appearance: none;
+    border: 0;
+    opacity: 0;
+    position: relative;
+    z-index: 3;
+    + span {
+        padding-left: 10px;
+        position: relative;
+        &::before {
+            background-color: $background;
+            border: 2px solid $color-dark;
+            border-radius: 50%;
+            content: ' ';
+            font-family: $font-awesome;
+            font-size: 16px;
+            height: 20px;
+            left: -20px;
+            line-height: 16px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: 20px;
+            z-index: 1;
+        }
+    }
+    &:checked + span::before {
+        content: '\f00c';
+    }
+}
+
+@mixin form-textarea {
+    appearance: none;
+    border: 2px solid $color-dark;
+    border-radius: 0;
+    padding: 15px 20px;
+}
+
+@mixin form-submit {
+    appearance: none;
+    border-radius: 0;
+}

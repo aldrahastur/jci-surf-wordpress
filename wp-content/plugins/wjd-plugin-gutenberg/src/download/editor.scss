@@ -1,0 +1,37 @@
+.wp-block-wjd-download {
+    &::after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+    img {
+        min-height: 84px;
+        min-width: 40px;
+    }
+    > * {
+        float: left;
+    }
+    button {
+        align-items: center;
+        display: flex !important;
+        height: 5.3125rem;
+        justify-content: center;
+        margin-right: 1rem !important;
+        max-width: 50%;
+        min-height: 84px !important;
+        padding: 0;
+        text-align: center;
+        width: 7.5rem;
+        img {
+            display: block;
+            height: 100%;
+            width: 100%;
+            &.image {                
+                object-fit: cover;
+            }
+            &.application {
+                object-fit: contain;
+            }
+        }
+    }
+}

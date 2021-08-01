@@ -1,0 +1,422 @@
+.button {
+    background: none;
+    background-color: '';
+    border-color: $accent;
+    border-style: solid;
+    border-width: .125rem;
+    color: $accent !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: bold;
+    padding: 1em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    + .button {
+        margin-left: 1em;
+    }
+    &.is-large {
+        font-size: 1.25rem;
+    }
+    &.is-small {
+        font-size: .8125rem;
+    }
+    &.is-tiny {
+        font-size: .625rem;
+    }
+    &:not(.is-sharp) {
+        border-radius: .25rem;
+    }
+    &.is-wide {
+        padding: 1em 2em;
+        .button__icon-before+ .button__text,
+        .button__text+ .button__icon-after {
+            margin-left: .8em;
+        }
+    }
+    &.is-unbreakable {
+        white-space: nowrap;
+        .button__icon-before,
+        .button__text,
+        .button__icon,
+        .button__icon-after {
+            white-space: nowrap;
+        }
+    }
+    .button__text,
+    .button__icon-before,
+    .button__icon-after {
+        color: $accent !important;
+    }
+    i {
+        color: $accent !important;
+        &::before,
+        &::after {
+            color: $accent !important;
+        }
+    }
+    &:hover {
+        background-color: '';
+        border-color: $accent-tertiary;
+        color: $accent-tertiary !important;
+        .button__text,
+        .button__icon-before,
+        .button__icon-after {
+            color: $accent-tertiary !important;
+        }
+        i {
+            color: $accent-tertiary !important;
+            &::before,
+            &::after {
+                color: $accent-tertiary !important;
+            }
+        }
+    }
+    &.is-inverted {
+        background-color: '';
+        border-color: $color-light;
+        color: $color-light !important;
+        .button__text,
+        .button__icon-before,
+        .button__icon-after {
+            color: $color-light !important;
+        }
+        i {
+            color: $color-light !important;
+            &::before,
+            &::after {
+                color: $color-light !important;
+            }
+        }
+        &:hover {
+            background-color: '';
+            border-color: $accent-tertiary;
+            color: $accent-tertiary !important;
+            .button__text,
+            .button__icon-before,
+            .button__icon-after {
+                color: $accent-tertiary !important;
+            }
+            i {
+                color: $accent-tertiary !important;
+                &::before,
+                &::after {
+                    color: $accent-tertiary !important;
+                }
+            }
+        }
+    }
+    &.is-secondary {
+        background-color: '';
+        border-color: $accent-secondary;
+        color: $accent-secondary !important;
+        .button__text,
+        .button__icon-before,
+        .button__icon-after {
+            color: $accent-secondary !important;
+        }
+        i {
+            color: $accent-secondary !important;
+            &::before,
+            &::after {
+                color: $accent-secondary !important;
+            }
+        }
+        &:hover {
+            background-color: '';
+            border-color: $accent-tertiary;
+            color: $accent-tertiary !important;
+            .button__text,
+            .button__icon-before,
+            .button__icon-after {
+                color: $accent-tertiary !important;
+            }
+            i {
+                color: $accent-tertiary !important;
+                &::before,
+                &::after {
+                    color: $accent-tertiary !important;
+                }
+            }
+        }
+    }
+    &.is-secondary-plain {
+        background-color: '';
+        border-color: $accent-secondary;
+        color: $accent-secondary !important;
+        .button__text,
+        .button__icon-before,
+        .button__icon-after {
+            color: $accent-secondary !important;
+        }
+        i {
+            color: $accent-secondary !important;
+            &::before,
+            &::after {
+                color: $accent-secondary !important;
+            }
+        }
+        &:hover {
+            background-color: '';
+            border-color: rgba(248, 161, 2, 0);
+            color: $accent-tertiary !important;
+            .button__text,
+            .button__icon-before,
+            .button__icon-after {
+                color: $accent-tertiary !important;
+            }
+            i {
+                color: $accent-tertiary !important;
+                &::before,
+                &::after {
+                    color: $accent-tertiary !important;
+                }
+            }
+        }
+    }
+    &.is-tertiary {
+        background-color: '';
+        border-color: $accent-tertiary;
+        color: $accent-tertiary !important;
+        .button__text,
+        .button__icon-before,
+        .button__icon-after {
+            color: $accent-tertiary !important;
+        }
+        i {
+            color: $accent-tertiary !important;
+            &::before,
+            &::after {
+                color: $accent-tertiary !important;
+            }
+        }
+        &:hover {
+            background-color: '';
+            border-color: $accent-secondary;
+            color: $accent-secondary !important;
+            .button__text,
+            .button__icon-before,
+            .button__icon-after {
+                color: $accent-secondary !important;
+            }
+            i {
+                color: $accent-secondary !important;
+                &::before,
+                &::after {
+                    color: $accent-secondary !important;
+                }
+            }
+        }
+    }
+    &.is-tertiary-plain {
+        background-color: '';
+        border-color: $accent-tertiary;
+        color: $accent-tertiary !important;
+        .button__text,
+        .button__icon-before,
+        .button__icon-after {
+            color: $accent-tertiary !important;
+        }
+        i {
+            color: $accent-tertiary !important;
+            &::before,
+            &::after {
+                color: $accent-tertiary !important;
+            }
+        }
+        &:hover {
+            background-color: '';
+            border-color: rgba(248, 161, 2, 0);
+            color: $accent-secondary !important;
+            .button__text,
+            .button__icon-before,
+            .button__icon-after {
+                color: $accent-secondary !important;
+            }
+            i {
+                color: $accent-secondary !important;
+                &::before,
+                &::after {
+                    color: $accent-secondary !important;
+                }
+            }
+        }
+    }
+    &.is-solid {
+        background-color: $inverted-background;
+        border-color: $accent;
+        color: $color-light !important;
+        .button__text,
+        .button__icon-before,
+        .button__icon-after {
+            color: $color-light !important;
+        }
+        i {
+            color: $color-light !important;
+            &::before,
+            &::after {
+                color: $color-light !important;
+            }
+        }
+        &:hover {
+            background-color: $accent-tertiary;
+            border-color: $accent-tertiary;
+            color: '' !important;
+            .button__text,
+            .button__icon-before,
+            .button__icon-after {
+                color: '' !important;
+            }
+            i {
+                color: '' !important;
+                &::before,
+                &::after {
+                    color: '' !important;
+                }
+            }
+        }
+    }
+    &.is-inverted-solid {
+        background-color: $background;
+        border-color: $color-light;
+        color: $accent !important;
+        .button__text,
+        .button__icon-before,
+        .button__icon-after {
+            color: $accent !important;
+        }
+        i {
+            color: $accent !important;
+            &::before,
+            &::after {
+                color: $accent !important;
+            }
+        }
+        &:hover {
+            background-color: $accent-tertiary;
+            border-color: $accent-tertiary;
+            color: '' !important;
+            .button__text,
+            .button__icon-before,
+            .button__icon-after {
+                color: '' !important;
+            }
+            i {
+                color: '' !important;
+                &::before,
+                &::after {
+                    color: '' !important;
+                }
+            }
+        }
+    }
+    &.is-secondary-solid {
+        background-color: $accent-secondary;
+        border-color: $accent-secondary;
+        color: $color-light !important;
+        .button__text,
+        .button__icon-before,
+        .button__icon-after {
+            color: $color-light !important;
+        }
+        i {
+            color: $color-light !important;
+            &::before,
+            &::after {
+                color: $color-light !important;
+            }
+        }
+        &:hover {
+            background-color: $accent-tertiary;
+            border-color: $accent-tertiary;
+            color: '' !important;
+            .button__text,
+            .button__icon-before,
+            .button__icon-after {
+                color: '' !important;
+            }
+            i {
+                color: '' !important;
+                &::before,
+                &::after {
+                    color: '' !important;
+                }
+            }
+        }
+    }
+    &.is-secondary-solid-inverted {
+        background-color: $accent-secondary;
+        border-color: $accent-secondary;
+        color: $color-light !important;
+        .button__text,
+        .button__icon-before,
+        .button__icon-after {
+            color: $color-light !important;
+        }
+        i {
+            color: $color-light !important;
+            &::before,
+            &::after {
+                color: $color-light !important;
+            }
+        }
+        &:hover {
+            background-color: $accent-tertiary;
+            border-color: $accent-tertiary;
+            color: '' !important;
+            .button__text,
+            .button__icon-before,
+            .button__icon-after {
+                color: '' !important;
+            }
+            i {
+                color: '' !important;
+                &::before,
+                &::after {
+                    color: '' !important;
+                }
+            }
+        }
+    }
+    &.is-tertiary-solid {
+        background-color: $accent-tertiary;
+        border-color: $accent-tertiary;
+        color: $color-light !important;
+        .button__text,
+        .button__icon-before,
+        .button__icon-after {
+            color: $color-light !important;
+        }
+        i {
+            color: $color-light !important;
+            &::before,
+            &::after {
+                color: $color-light !important;
+            }
+        }
+        &:hover {
+            background-color: $accent-secondary;
+            border-color: $accent-secondary;
+            color: '' !important;
+            .button__text,
+            .button__icon-before,
+            .button__icon-after {
+                color: '' !important;
+            }
+            i {
+                color: '' !important;
+                &::before,
+                &::after {
+                    color: '' !important;
+                }
+            }
+        }
+    }
+    &.is-close {
+        font-size: 1.2rem !important;
+        height: 1.875rem;
+        line-height: 1.8125rem;
+        padding: 0;
+        width: 1.875rem;
+    }
+}

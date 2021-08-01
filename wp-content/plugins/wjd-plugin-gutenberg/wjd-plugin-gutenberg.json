@@ -1,0 +1,8 @@
+{
+    "name" : "WJD Gutenberg Blocks",
+    "version" : "1.0.5",
+    "download_url" : "https://wjd-frontend-wordpress-plugin-gutenberg.s3.eu-central-1.amazonaws.com/master/wjd-plugin-gutenberg.zip",
+    "sections" : {
+        "description" : "Gutenberg Blöcke für das WJD 2020 Theme."
+    }
+}

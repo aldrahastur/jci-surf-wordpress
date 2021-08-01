@@ -1,0 +1,31 @@
+.cookie-banner {
+    background: $inverted-background;
+    border-top: 2px solid $accent-secondary;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    text-align: left;
+    width: 100%;
+    display: none;
+    z-index: 9999;
+    &.is-visible {
+        display: block !important;
+    }
+    &.is-debug {
+        display: block !important;
+        position: relative;
+    }
+}
+.cookie-banner__text {
+    max-height: 10em;
+    overflow: auto;
+}
+.cookie-banner__button {
+    margin-left: .5em;
+    margin-right: .5em;
+}
+.cookie-banner__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}

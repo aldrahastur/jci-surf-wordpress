@@ -1,0 +1,14 @@
+.wp-block[data-type="wjd/group"]:not(.is-selected):not(.has-child-selected) {
+    > .editor-block-list__block-edit::before {
+        border-color: #013493;
+        box-shadow: -1px 0 0 0 #013493;
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+.wp-block[data-type="wjd/group"] ~ .wp-block[data-type="wjd/group"] {
+    margin-top: 50px;
+}
+.wp-block[data-type="wjd/hero"] ~ .wp-block[data-type="wjd/group"] {
+    margin-top: 50px;
+}

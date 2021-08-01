@@ -1,0 +1,28 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wjd-button-wrapper {
+    &::after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+    &.left {
+        > .button {
+            float: left;
+        }
+    }
+    &.right {
+        > .button {
+            float: right;
+        }
+    }
+    &.center {
+        > .button {
+            margin: 0 auto;
+            display: table;
+        }
+    }
+}
